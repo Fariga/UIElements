@@ -1,0 +1,50 @@
+.tracking-chart {
+  grid-area: track;
+  padding: 33px 43px;
+  background-color: $color-text-lite;
+  display: flex;
+  flex-direction: column;
+}
+
+.tracking-chart__btn-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.tracking-chart__btn {
+  font-size: 17px;
+  color: $color-grey;
+  padding: 7px 17px;
+
+  &:hover,
+  &:active {
+    background-color: $color-dark-blue;
+    color: $color-text-lite;
+    border-radius: 14px;
+  }
+
+}
+
+.tracking-chart__period {
+  margin-bottom: auto;
+}
+
+.tracking-chart__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tracking-chart__wrapper {
+  position: relative;
+}
+
+.tracking-chart__text {
+  position: absolute;
+  top: 43%;
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
+  font-size: 27px;
+  line-height: 42px;
+  color: $main-color-text;
+}

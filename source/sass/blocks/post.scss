@@ -1,0 +1,123 @@
+.post {
+  grid-area: post;
+  display: flex;
+  background-color: $color-text-lite;
+  overflow: hidden;
+}
+
+.post__interaction {
+  display: flex;
+  flex-direction: column;
+}
+
+.post__item {
+  display: flex;
+  flex-grow: 1;
+
+  &:not(:last-child) {
+    .post__link {
+      border-bottom: 1px solid $color-blue;
+
+      &:active {
+        border-bottom-color: $color-text-red;
+      }
+    }
+  }
+}
+.post__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 23px;
+  background-color: $color-dark-blue;
+  width: 72px;
+
+  &:hover {
+    background-color: $color-dark;
+  }
+
+  &:active {
+    background-color: $color-text-red;
+  }
+}
+
+.post__box {
+  padding: 32px 42px 32px 34px;
+  width: 45.07%;
+}
+
+.post__title {
+  font-size: 21px;
+  line-height: 1.43;
+  color: $color-dark;
+  font-weight: 300;
+}
+
+.post__number-box {
+  margin-bottom: 18px;
+}
+
+.post__number,
+.post__reviews {
+  font-size: 14px;
+  line-height: 3.714;
+}
+
+.post__number {
+  color: $color-dark;
+}
+
+.post__reviews {
+  color: $color-grey;
+}
+
+.post__description {
+  font-size: 14px;
+  line-height: 1.714;
+  color: $color-grey;
+  margin-bottom: 15px;
+}
+
+.post__link-text {
+  font-size: 14px;
+  line-height: 1.286;
+  color: $color-text-red;
+}
+
+.post__picture {
+  background-image: url(/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 45.84%;
+  position: relative;
+}
+
+.post__comment {
+  position: absolute;
+  bottom: 5px;
+  right: 29px;
+  display: flex;
+}
+
+.post__link-like {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+
+  svg:hover {
+    fill: $color-dark-blue;
+  }
+
+  svg:active {
+    fill: $color-text-red;
+  }
+}
+
+.post__number-like {
+  font-size: 17px;
+  line-height: 42px;
+  color: $color-text-lite;
+  margin-left: 10px;
+}
+
+

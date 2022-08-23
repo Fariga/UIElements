@@ -1,0 +1,96 @@
+.person-card {
+  grid-area: person;
+  background-color: $color-text-lite;
+  min-height: 487px;
+  padding: 63px 25px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.person-card__header {
+  width: 145px;
+  height: 145px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.person-card__img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.person-card__status {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: $color-grey;
+  border-radius: 50%;
+  border: 3px solid $color-text-lite;
+  right: 13px;
+  top: 6px;
+  font-size: 0;
+
+  &--offline {
+    background-color: $color-text-red;
+  }
+  &--online {
+    background-color: $success;
+  }
+}
+
+.person-card__full-name {
+  font-size: 21px;
+  line-height: 42px;
+  color: $color-dark;
+  text-align: center;
+}
+
+.person-card__location {
+  font-size: 14px;
+  line-height: 1;
+  color: $color-grey;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &::before {
+    content: '';
+    width: 12px;
+    height: 17px;
+    background-image: url(/img/map-point.png);
+    display: inline-block;
+    margin-right: 7px;
+  }
+}
+
+.person-card__follower-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 63px;
+  margin-bottom: auto;
+}
+
+.person-card__followers {
+  font-size: 14px;
+  line-height: 1;
+  color: $color-grey;
+
+  &:first-child {
+    margin-right: 17px;
+  }
+}
+
+.person-card__followers-count {
+  color: $color-dark;
+}
+

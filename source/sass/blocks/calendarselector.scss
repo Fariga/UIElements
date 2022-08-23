@@ -1,0 +1,9 @@
+.calendarselector {
+  grid-area: calendar;
+  padding: 0 23px 25px 23px;
+  background-color: $color-text-lite;
+
+  .btn {
+    width: 100%;
+  }
+}

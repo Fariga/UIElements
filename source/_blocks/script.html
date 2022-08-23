@@ -1,0 +1,320 @@
+
+  <script>
+         //chart//
+
+const dataWeek = {
+      labels: ['Mon','Tues','Wed','Thu','Fri','Sat','Sun' ],
+      datasets: [{
+      data: [17, 22, 30, 25, 29, 34, 29],
+      backgroundColor: ['rgb(251, 99, 98)'],
+      borderColor: ['rgb(251, 99, 98)'],
+      borderWidth: 1
+    }]
+  };
+
+const configWeek = {
+  type: 'bar',
+  data: dataWeek,
+  options: {
+    plugins: {
+      tooltip: {   //всплывающая подсказка над bar//
+        yAlign: 'bottom',
+        backgroundColor: 'rgb(36, 41, 49)',
+        bodyColor: 'rgb(244, 244, 244)',
+        padding: 20,
+        caretSize: 7,  //размер стрелки//
+        callbacks: {
+         title: function() {}  //убрать текст//
+        },
+        displayColors: false  //убрать квадрат//
+      },
+      legend: {
+        display: false,
+      }
+    },
+    scales: {
+      yAxis: {
+        beginAtZero: true,
+        max: 40,
+        min: 0,
+        grid: {
+          drawBorder: false
+        },
+        ticks: {
+          stepSize: 10,
+          color: 'rgb(102, 102, 102)',
+          font: {
+            size: 12
+          },
+        },
+      },
+      xAxis: {
+        grid: {
+          display: false
+        },
+        ticks: {
+          color: 'rgb(102, 102, 102)',
+          font: {
+            size: 12
+          },
+        },
+      }
+    }
+  },
+};
+
+const dataTracking = {
+  labels: ['7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22'],
+  datasets: [{
+    label: 'Walking',
+    data: [0, 4, 10, 13, 15, 18, 20, 15, 25, 28, 20, 32, 35, 10, 15, 10],
+    fill: true,
+    borderColor: 'rgb(251, 99, 98)',
+    backgroundColor: 'rgb(251, 99, 98)',
+    tension: 0.1,
+  }, {
+    label: 'Running',
+    data: [0, 10, 15, 18, 15, 23, 28, 25, 30, 32, 40, 37, 39, 40, 30, 0],
+    fill: true,
+    borderColor: 'rgb(181, 70, 69)',
+    backgroundColor: 'rgb(181, 70, 69)',
+    tension: 0.1,
+  }
+]
+};
+
+const configTracking = {
+  type: 'line',
+  data: dataTracking,
+  options: {
+    elements: {
+      point:{
+         radius: 0
+      },
+    },
+    plugins: {
+      tooltip: {   //всплывающая подсказка над bar//
+        yAlign: 'bottom',
+        backgroundColor: 'rgb(36, 41, 49)',
+        bodyColor: 'rgb(244, 244, 244)',
+        padding: 20,
+        caretSize: 7,  //размер стрелки//
+        callbacks: {
+         title: function() {}  //убрать текст//
+        },
+        displayColors: false  //убрать квадрат//
+      },
+      legend: {
+        position: 'bottom',
+        align: 'start',
+        labels: {
+          usePointStyle: true,
+          boxWidth: 13,
+          boxHeight: 9,
+          color: 'rgb(153, 153, 153)',
+        }
+      }
+    },
+    scales: {
+      yAxis: {
+        grid: {
+          drawBorder: false
+        },
+        ticks: {
+          stepSize: 10,
+          color: 'rgb(153, 153, 153)',
+          font: {
+            size: 12
+          },
+        }
+      },
+      xAxis: {
+        grid: {
+          display: false
+        },
+        ticks: {
+          stepSize: 10,
+          color: 'rgb(153, 153, 153)',
+          font: {
+            size: 12
+          },
+        }
+      },
+    },
+  }
+};
+
+const dataPerformance = {
+  datasets: [{
+    label: 'Walking',
+    data: [18, 82],
+    backgroundColor: [
+      'rgb(64, 74, 88)',
+      'rgb(230, 230, 230)'
+    ],
+    hoverOffset: 0,
+    borderWidth: 0
+  }]
+};
+
+const dataTime = {
+  datasets: [{
+    label: 'Walking',
+    data: [18, 82],
+    backgroundColor: [
+      'rgb(64, 74, 88)',
+      'rgb(230, 230, 230)'
+    ],
+    hoverOffset: 0,
+    borderWidth: 0
+  }]
+};
+
+const dataDistance = {
+  datasets: [{
+    label: 'Walking',
+    data: [18, 82],
+    backgroundColor: [
+      'rgb(64, 74, 88)',
+      'rgb(230, 230, 230)'
+    ],
+    hoverOffset: 0,
+    borderWidth: 0
+  }]
+};
+
+const configPerformance = {
+  type: 'doughnut',
+  data: dataPerformance,
+  options: {
+    radius: "66",
+    cutout: '60',
+    plugins: {
+      title: {
+      display: true,
+      text: 'Performance',
+      position: 'bottom',
+      font: {
+        size: 14,
+        color: 'rgb(102, 102, 102)'
+        },
+      },
+    }
+  }
+};
+
+const configTime = {
+  type: 'doughnut',
+  data: dataTime,
+  options: {
+    radius: "66",
+    cutout: '60',
+    plugins: {
+      title: {
+      display: true,
+      text: 'Time',
+      position: 'bottom',
+      font: {
+        size: 14,
+        color: 'rgb(102, 102, 102)'
+        },
+      },
+    }
+  }
+};
+
+const configDistance = {
+  type: 'doughnut',
+  data: dataDistance,
+  options: {
+    radius: "66",
+    cutout: '60',
+    plugins: {
+      title: {
+      display: true,
+      text: 'Distance',
+      position: 'bottom',
+      font: {
+        size: 14,
+        color: 'rgb(102, 102, 102)'
+        },
+      },
+    }
+  }
+};
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var myDrop = new drop({
+      selector:  '#myMulti'
+     });
+
+
+     const calendar = new VanillaCalendar({
+      HTMLElement: document.querySelector('.vanilla-calendar'),
+     });
+     calendar.init();
+
+     document.querySelector('.mail-box__header').addEventListener('click',function(e) {
+      this.classList.toggle('mail-box__header--open');
+      this.classList.toggle('frame');
+      this.parentElement.classList.toggle('frame');
+     });
+
+     const weekChartEl = document.getElementById('weekChart');
+
+     if (weekChartEl) {
+     const weekChart = new Chart(
+     weekChartEl,
+     configWeek
+      );
+    }
+
+    const trackingChartEl = document.getElementById('trackingChart');
+
+    if (trackingChartEl) {
+    const trackingChart = new Chart(
+    trackingChartEl,
+    configTracking
+    );
+  }
+
+    const performanceChartEl = document.getElementById('performanceChart');
+
+    if (performanceChartEl) {
+    const performanceChart = new Chart(
+    performanceChartEl,
+    configPerformance
+  );
+}
+
+    const timeChartEl = document.getElementById('timeChart');
+
+    if (timeChartEl) {
+    const timeChart = new Chart(
+    timeChartEl,
+    configTime
+    );
+    }
+
+    const distanceChartEl = document.getElementById('distanceChart');
+
+    if (distanceChartEl) {
+    const distanceChart = new Chart(
+    distanceChartEl,
+    configDistance
+    );
+    }
+
+    });
+
+    jQuery(document).ready(function () {
+      jQuery('.datepicker-here').datepicker({ language: 'en' });
+      //$('.datepicker-here).data('datepicker')
+     });
+
+
+
+
+
+  </script>
+

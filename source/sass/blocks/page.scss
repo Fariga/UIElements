@@ -1,0 +1,10 @@
+.page {
+  display: grid;
+  grid-template-columns: 345px 791px 361px 380px;
+  // grid-template-rows: 426px 487px 89px 342px;
+  gap: 50px;
+  grid-template-areas:  "calendar video map map"
+                        "hotel track person message"
+                        "hotel track menu menu"
+                        "mail post week week";
+}

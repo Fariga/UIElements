@@ -3,20 +3,25 @@
 @import "mixins.scss";
 @import "global.scss";
 @import "visually-hidden.scss";
-@import "site.scss";
-@import "blocks/page-header.scss";
-@import "blocks/site-list.scss";
-@import "blocks/header-nav.scss";
+@import "blocks/page-main.scss";
+@import "blocks/page.scss";
+@import "blocks/person-card.scss";
 @import "blocks/btn.scss";
-@import "blocks/edit-profile.scss";
-@import "page-main.scss";
-@import "blocks/sidebar-menu.scss";
-@import "blocks/submenu.scss";
-@import "blocks/main-info.scss";
-@import "blocks/summary.scss";
-@import "blocks/table.scss";
-@import "blocks/alert.scss";
-@import "blocks/statistics.scss";
-@import "blocks/posts.scss";
-@import "blocks/pagination.scss";
-@import "blocks/new-posts.scss";
+@import "blocks/menu.scss";
+@import "blocks/badge.scss";
+@import "blocks/message-card.scss";
+@import "blocks/multiselect.scss";
+@import "blocks/calendarselector.scss";  //calendar//
+@import "blocks/vanilla-calendar.scss"; //calendar//
+@import "blocks/post.scss";
+@import "blocks/mail-box.scss";
+@import "blocks/map.scss";
+@import "blocks/hotelfilter.scss";
+@import "blocks/air-datepicker.scss";
+@import "blocks/videoplayer.scss";
+@import "blocks/week-chart.scss";
+@import "blocks/tracking-chart.scss";
+@import "blocks/frame.scss";
+
+
+

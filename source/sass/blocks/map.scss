@@ -1,0 +1,75 @@
+.map {
+  grid-area: map;
+  position: relative;
+  overflow: hidden;
+}
+
+.map__box {
+  width: 100%;
+  height: 360px;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.map__btn-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.map__btn {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: $color-blue;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 27px;
+  line-height: 1;
+  text-align: center;
+
+  &--plus {
+    &::before {
+      content: "+";
+    }
+  }
+
+  &--minus {
+    &::before {
+      content: "-";
+    }
+  }
+}
+
+.map__input-wrapper {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-image: url(/img/search.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 20px;
+    left: 17px;
+  }
+}
+
+.map__input {
+  width: 100%;
+  font-size: 16px;
+  line-height: 42px;
+  color: $color-grey;
+  border: none;
+  padding: 12px 12px 12px 55px;
+
+}

@@ -1,0 +1,12 @@
+.videoplayer {
+  grid-area: video;
+  width: 791px;
+}
+
+.videoplayer__container {
+  background-image: url(/img/videoplayer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}

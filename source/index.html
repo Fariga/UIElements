@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./_blocks/head.html') 
+@@include('./_blocks/head.html')
+
+@@include('./_blocks/script.html')
+
   <body>
-    <div class="site">
-      @@include('./_blocks/header.html')
-        
-      <main class="page-main">
-        <div class="wrapper">
-          <div class="wrapper-box">
-            <div class="page-main__container">
-            @@include('./_blocks/sidebar-menu.html') 
-            @@include('./_blocks/main/main-info.html')
-            </div>
-          </div>
+    <main class="page-main">
+      <div class="wrapper">
+        <div class="page">
+          @@include('./_blocks/calendarselector.html')
+          @@include('./_blocks/videoplayer.html')
+          @@include('./_blocks/map.html')
+          @@include('./_blocks/hotelfilter.html')
+          @@include('./_blocks/tracking-chart.html')
+          @@include('./_blocks/person-card.html')
+          @@include('./_blocks/message-card.html')
+          @@include('./_blocks/menu.html')
+          @@include('./_blocks/mail-box.html')
+          @@include('./_blocks/post.html')
+          @@include('./_blocks/week-active-chart.html')
         </div>
-      </main>
-    </div>
-    @@include('./_blocks/script.html')
+
+      </div>
+    </main>
   </body>
 </html>

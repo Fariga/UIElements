@@ -1,0 +1,39 @@
+.menu {
+  grid-area: menu;
+  overflow: hidden;
+}
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.menu__link {
+  background-color: $color-text-lite;
+  font-size: 17px;
+  line-height: 42px;
+  color: $color-grey;
+  padding: 24px 22px 24px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    background-color: $color-dark-blue;
+    color: $color-text-lite;
+
+    svg {
+      fill: $color-text-lite;
+    }
+  }
+}
+.menu__img {
+  display: flex;
+  margin-right: 10px;
+
+
+}
+.badge {
+}
+.menu__badge {
+}

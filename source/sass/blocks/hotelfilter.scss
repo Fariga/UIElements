@@ -1,0 +1,202 @@
+.hotelfilter {
+  grid-area: hotel;
+  background-color: $color-text-lite;
+  overflow: hidden;
+}
+
+.hotelfilter__head {
+  background-image: url(/img/backgroundHotel.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 185px;
+}
+
+.hotelfilter__head-wrapper {
+  padding: 121px 25px 13px 25px;
+}
+
+.hotelfilter__name,
+.hotelfilter__location {
+  line-height: 26px;
+  color: $color-text-lite;
+}
+
+.hotelfilter__name {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.hotelfilter__location {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 17px;
+    background-image: url(/img/icon-location.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 6px;
+  }
+}
+
+.hotelfilter__form {
+  padding: 25px;
+  height: calc(100% - 185px);
+}
+
+.hotelfilter__box {
+  margin-bottom: 24px;
+}
+
+.hotelfilter__check {
+  margin-bottom: 17px;
+}
+
+.hotelfilter__form-search {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hotelfilter__text {
+  display: inline-block;
+  margin-bottom: 4px;
+  line-height: 1.86;
+  color: $main-color-text;
+}
+
+.hotelfilter__text--checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hotelfilter__text--width {
+  width: 100%;
+}
+
+.hotfilter__control-box {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    background-image: url(/img/icon-calendar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 4px;
+    right: 4px;
+    pointer-events: none;
+  }
+}
+
+.hotelfilter__control {
+  display: block;
+  width: 100%;
+  padding: 9px 41px 9px 13px;
+  border-radius: 2px;
+  line-height: 1.86;
+  color: $main-color-text;
+  background-color: $color-grey-1;
+  border: none;
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.hotelfilter__checkbox {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+
+.hotelfilter__mark {
+  display: inline-block;
+  position: relative;
+  width: 23px;
+  height: 23px;
+  background-color: $color-grey-1;
+  border: 1px solid #9c918a;
+  border-radius: 2px;
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+  margin-right: 12px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/img/icon-tick.png);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    width: 16px;
+    height: 11px;
+  }
+}
+
+.hotelfilter__checkbox:checked ~ .hotelfilter__mark::after {
+  display: block;
+}
+
+.hotelfilter__select-box {
+  display: flex;
+
+
+  .hotelfilter__select-inner-box {
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+.hotelfilter__select-inner-box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.hotelfilter__select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.hotelfilter__select-group {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    background-image: url(/img/icon-rectangle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 4px;
+    right: 4px;
+    pointer-events: none;
+  }
+}
+
+.hotelfilter__btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url(/img/icon-magnifying.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 12px
+  }
+}
